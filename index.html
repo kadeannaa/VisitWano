@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisitWano | A new journey</title>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+    <header>
+        <navbar class="container">
+            <div class="navbar">
+                <img class="logo" src="asset/logo.png" alt="">
+            <div class="nav-link">
+                <a href="#hero">Home</a>
+                <a href="#package">Our Packcage</a>
+                <a href="#call-us">Call Us</a>
+            </div>
+            </div>
+        </navbar>   
+        <hr>
+    </header>
+    <main>
+        <section id="hero">
+            <div class="container">
+                <div class="hero-title">
+                    <h1>Your trusted Travel Agent, gozaru!</h1>
+                    <h5>Be our nakama and we will open Wano border together</h5>
+                </div>
+            </div>
+        </section>
+        <section id="about-contact">
+            <div class="container">
+                <div class="about-contact">
+                    <div class="about">
+                        <div class="slide-img">
+                            <img class="img-slideshow" src="asset/slide-1.png" alt="">
+                        </div>
+                        <div class="slide-img">
+                            <img class="img-slideshow" src="asset/slide-2.png" alt="">
+                        </div>
+                        <div class="slide-img">
+                            <img class="img-slideshow" src="asset/slide-3.png" alt="">
+                        </div>
+                        <div class="slide-button">
+                            <button onclick="plusDivs(-1)"> < </button>
+                            <button onclick="plusDivs(1)"> > </button>
+                        </div>
+                        <script>
+                            var slideIndex = 1;
+                            showDivs(slideIndex);
+
+                            function plusDivs(n) {
+                            showDivs(slideIndex += n);
+                            }
+
+                            function showDivs(n) {
+                            var i;
+                            var x = document.getElementsByClassName("slide-img");
+                            if (n > x.length) {slideIndex = 1}
+                            if (n < 1) {slideIndex = x.length}
+                            for (i = 0; i < x.length; i++) {
+                                x[i].style.display = "none";  
+                            }
+                            x[slideIndex-1].style.display = "block";  
+                            }
+                            //console.log(slideIndex)
+                        </script>
+                        <div class="paragraph-person-info">
+                            <div class="about-paragraph">
+                                <p>Your holiday will be wonderful with VisitWano and the Nakama.</p>
+                            </div>
+                            <div class="about-person">
+                                <img src="asset/shinobu.png" alt="">
+                                <div class="person-info">
+                                    <h6>Shinobu</h6>
+                                    <p>The kunoichi</p>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h5 class="info-header">VisitWano is a travel special travel agent who will provide you with a great experience in a closed-border country. We suggest you choose us because we have several benefits that you will not get from others.</h5>
+                                <ul class="info-list">
+                                    <li>
+                                        <div class="list-number">1</div>
+                                        <p class="list-text">Our guide is an original citizen of Wano-kuni and has a very good understanding of Wano-kuni's culture.</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">2</div>
+                                        <p class="list-text">We are so familiar with places of Wano-kuni that have a great historical story that will blow your mind.</p>
+                                    </li>
+                                    <li>
+                                        <div class="list-number">3</div>
+                                        <p class="list-text">We offer you a good and affordable price, and if you join us now you will get up to a 30% discount.</p>
+                                    </li>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="contact">
+                            <div class="contact-head">
+                                <h2>Contact us</h2>
+                                <p>Our tour team will contact you within at least 24 hours, our samurai will keep your data safe.</p>
+                            </div>
+                                <form name="contact-form" class="form" onsubmit="return validateForm()">
+                                    <div class="form-nama">
+                                        <label class="label" for="name">Your Name :</label>
+                                        <input class="input" type="text" name="Name" id="name" placeholder="First and last name">
+                                    </div>
+                                    <div class="form-email">
+                                        <label class="label" for="email">Email Adress :</label>
+                                        <input class="input" type="text" name="Email" id="email" placeholder="example@gmail.com">
+                                    </div>
+                                    <div class="form-interest">
+                                        <label class="label" for="interest" placeholder="Select one">What are you interest in?</label>
+                                        <select class="input" name="Interest" id="interest">
+                                            <option value="" disabled selected>Select option</option>
+                                            <option value="Traveling">Traveling</option>
+                                            <option value="Staycation">Staycation</option>
+                                            <option value="Culinary">Culinary</option>
+                                            <option value="Katana">Katana-art</option>
+                                        </select>
+                                    </div><br>
+                                    <input class="send-button" type="submit" value="Send">
+
+                                    <script>
+                                        function validateForm() {
+                                            var x = document.forms['contact-form']['Name'].value;
+                                            var y = document.forms['contact-form']['Email'].value;
+                                            var z = document.forms['contact-form']['Interest'].value;
+                                            
+                                            if (x == "" || y == "" || z == "" ) {
+                                                alert('Form tidak boleh kosong')
+                                                return false;
+                                            }
+                                        }
+                                    </script>
+                                </form>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+        <section id="package">
+            <div class="package-head">
+                <h3>Our Package</h3>
+            </div>
+            <div class="container">
+                <div class="package-box">
+                    <div class="box-row1">
+                        <div class="row1-1">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p1-1">
+                                <h5 class="pack-loc">Flower Capital</h5>
+                                <p class="detail-loc">The center of government, the magnificent shogun temple is in the middle of the city and guarded by the Wano legend "the nine red scabbards".</p>
+                            </div>
+                        </div>
+                        <div class="row1-2">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p1-2">
+                                <h5 class="pack-loc">Mt. Fuji Cave</h5>
+                                <p class="detail-loc" >The most heritage spot in Wano-kuni, there is road poneglyph which contains a void history.</p>
+                            </div>
+                        </div>
+                        <div class="row1-3">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p1-3">
+                                <h5 class="pack-loc">Ringo</h5>
+                                <p class="detail-loc" >Ringo is a wintry area, there is the cemetery of Wano-kuni heroes where you can pilgrimage and place a good flower on their tomb.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-row2">
+                        <div class="row2-1">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p2-1">
+                                <h5 class="pack-loc">Udon</h5>
+                                <p class="detail-loc" >This is an industry area, you can have a tour of several weapon industries developed by one of MADS scientists. </p>
+                            </div>
+                        </div>
+                        <div class="row2-2">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p2-2">
+                                <h5 class="pack-loc" >Onigashima</h5>
+                                <p class="detail-loc" >This is the perfect spot for you who like horror entertainment. Always give goosebumps and a unique experience.</p>
+                            </div>
+                        </div>
+                        <div class="row2-3">
+                            <img class="point-img" src="asset/idea-lamp.png" alt="">
+                            <div class="p2-3">
+                                <h5 class="pack-loc" >Wano-kuni Ports</h5>
+                                <p class="detail-loc" >Wano-kuni has six ports that connect every city in this country. You can get sailing experience from one city to other.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="call-us" id="call-us">
+            <div class="closing">
+                <h1>So, pack your staff and join us!</h1>
+                <p>We offer you a up to 30% discount if you register within 3 days from March, 8th. You can pay cash or with maximum of 5 months' installment.</p>
+                <div class="closing-button">
+                    <button>Call to action</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer>
+        <div class="footer">
+            <img src="asset/logo.png" alt="">
+            <div class="legal">
+                <a href="">Terms of services</a>
+                <a href="">Privacy Policy</a>
+            </div>
+            <div class="copyright">
+                <a href="">&copy 2023</a>
+                <p>AanPranataNadeak</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
